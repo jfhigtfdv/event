@@ -1,0 +1,135 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply centering styles to the container */
+.container {
+    position: relative; /* Added */
+    z-index: 1; /* Added to ensure content is in front */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+/* Load the custom font */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('font.ttf') format('truetype');
+}
+
+/* Apply the custom font to specific elements */
+body, h1, h2, p {
+    font-family: 'CustomFont', Arial, sans-serif;
+}
+
+/* Basic styling for the header */
+header {
+    text-align: center;
+    padding: 20px;
+    border-top-left-radius: 10px; /* Rounded top-left corner */
+    border-top-right-radius: 10px; /* Rounded top-right corner */
+    display: inline; /* Make the background only cover the text */
+    padding: 5px 10px; /* Add padding to the background */
+    border-radius: 10px; /* Rounded corners for the background */
+    margin-bottom: 20px; /* Move the header closer to the card */
+}
+
+header h1 {
+    font-size: 40px; /* Adjust the font size as needed */
+    color: #eee; /* Even lighter text color (lighter gray) */
+    background-color: transparent; /* Remove the pink background */
+}
+
+/* Style the main content area */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+.birthday-card {
+    background-color: rgba(255, 255, 255, 0.2); /* More translucent white background color for the card */
+    padding: 20px;
+    border-radius: 20px; /* More rounded corners for the card */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Drop shadow for the card */
+    max-width: 600px; /* Set a maximum width for the card */
+    margin: 10px; /* Reduced margin between the pink and white boxes */
+}
+
+.birthday-card img {
+    max-width: 100%; /* Make sure the image doesn't exceed the width of its container */
+    width: 150px; /* Set the desired width for the image (adjust as needed) */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
+h2 {
+    font-size: 26px; /* Adjust the font size as needed */
+    color: #ccc; /* Even lighter text color (light gray) */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #ddd; /* Even lighter text color (light gray) */
+    margin-bottom: 10px;
+}
+
+/* Style the "With love, Your Name" section */
+.love-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.love-section p {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #ddd; /* Even lighter text color (light gray) */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px; /* Move the footer closer to the card */
+}
+
+footer p {
+    font-size: 20px; /* Adjust the font size as needed */
+    color: #ddd; /* Even lighter text color (light gray) */
+    margin-bottom: 0;
+}
+
+/* Scrolling image animation */
+.scrolling-image-container {
+    position: absolute; /* Added */
+    top: 0; /* Added */
+    left: 0; /* Added */
+    width: 100%; /* Added */
+    height: 100vh; /* Set the height to match the viewport */
+    z-index: 0; /* Send the scrolling image to the background */
+    overflow: hidden;
+}
+
+.scrolling-image {
+    background: url("./background-image.jpg") repeat-x;
+    background-size: contain; /* Ensure the image fits without zooming */
+    height: 100%; /* Fill the container's height */
+    width: 7680px; /* Adjust the width as needed for your image */
+    animation: scrollBackground 120s linear infinite; /* Customize the animation duration and timing function */
+}
+
+@keyframes scrollBackground {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Move the image horizontally */
+    }
+}
