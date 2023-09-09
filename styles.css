@@ -122,7 +122,7 @@ footer p {
     background-size: contain; /* Ensure the image fits without zooming */
     height: 100%; /* Fill the container's height */
     width: 7680px; /* Adjust the width as needed for your image */
-    animation: scrollBackground 120s linear infinite; /* Customize the animation duration and timing function */
+    animation: scrollBackground 150s linear infinite; /* Customize the animation duration and timing function */
 }
 
 @keyframes scrollBackground {
